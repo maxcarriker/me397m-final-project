@@ -136,8 +136,10 @@ def create_wind_speed_map(turbine_locations, grid_size):
     return wind_map
 
 # Streamlit app
-st.title("Wind Speed and Direction Map")
+st.title("Wind Speed and Direction Map at Turbine Locations")
 st.write("Select parameters and generate the map.")
+st.write("Grid size will determine the granularity of the data since wind turbine locations will be filtered by latitude and longitude")
+st.write("For faster runtime, choose Grid size = 5.00 degrees.")
 
 # User input
 state = st.text_input("Enter state abbreviation (e.g., TX):", "TX")
